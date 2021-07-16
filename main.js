@@ -4,7 +4,7 @@ const pokemonContainer = document.querySelector(".pokemon-container");
 
 button.addEventListener('click', (e) => {
     e.preventDefault();
-    traerPokemon(input.value);
+    traerPokemon(input.value.toLowerCase());
 });
 
 
@@ -13,7 +13,8 @@ const traerPokemon = (pokemon) => {
     .then(res => res.json())
     .then(data => {
         crearPokemon(data);
-    });
+    })
+    .catch(error => alert("Pokemon no encontrado, revisa el nombre introducido..."))
 }
 
 
