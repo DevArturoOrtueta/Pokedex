@@ -14,7 +14,7 @@ const traerPokemon = (pokemon) => {
     .then(data => {
         crearPokemon(data);
     })
-    .catch(error => alert("Pokemon no encontrado, revisa el nombre introducido..."))
+    .catch(error => swal("Error", "Pokemon no encontrado, revisa el nombre introducido...", "error"))
 }
 
 
