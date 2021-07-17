@@ -13,6 +13,7 @@ const traerPokemon = (pokemon) => {
     fetch(`https://pokeapi.co/api/v2/pokemon/${pokemon}/`)
     .then(res => res.json())
     .then(data => {
+
         crearPokemon(data);
     })
     .catch(error => swal("Error", "Pokemon no encontrado, revisa el nombre introducido...", "error"))
@@ -27,8 +28,11 @@ const crearPokemon = (pokemon) => {
     pname.textContent = pokemon.name;
 
     const pstats = document.createElement('h4');
-    pstats.textContent = 'Stats';
+    pstats.textContent = 'Ability';
 
+    const pability = document.createElement('p');
+    
+    pability.textContent = pokemon.abilities[0].ability.name;
     const pdivstats = document.createElement('div');
     pdivstats.setAttribute('style', 'flex');
 
@@ -36,6 +40,7 @@ const crearPokemon = (pokemon) => {
     div.appendChild(img);
     div.appendChild(pname);
     pdivstats.appendChild(pstats);
+    pdivstats.appendChild(pability);
 
     div.appendChild(pdivstats);
 

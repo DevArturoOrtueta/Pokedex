@@ -2,13 +2,15 @@
     border-radius: 25px;
     margin: 3% 4%;
     padding: 5%;
-    width: 10vw;
+    width: 65vw;
     -webkit-box-shadow: 7px 10px 25px 0px rgba(148,146,148,1);
     -moz-box-shadow: 7px 10px 25px 0px rgba(148,146,148,1);
     box-shadow: 7px 10px 25px 0px rgba(148,146,148,1);
 }
 
 .pokemon-container{
+    
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-around;
 }
