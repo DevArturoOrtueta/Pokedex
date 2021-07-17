@@ -30,11 +30,12 @@ const crearPokemon = (pokemon) => {
     const pstats = document.createElement('h4');
     pstats.textContent = 'Ability';
 
+    const pability = document.createElement('p');
+
     const pdivstats = document.createElement('div');
     pdivstats.setAttribute('style', 'flex');
     pdivstats.appendChild(pstats);
     pdivstats.appendChild(pability);
-    
     pokemon.abilities.forEach(element => {
         const pability = document.createElement('label');
         pability.setAttribute("class", "abilities");
