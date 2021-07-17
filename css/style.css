@@ -14,3 +14,7 @@
     flex-wrap: wrap;
     justify-content: space-around;
 }
+
+.abilities{
+    margin: 4% auto;
+}
