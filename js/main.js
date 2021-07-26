@@ -21,17 +21,37 @@ const traerPokemon = (pokemon) => {
     .catch(error => swal("Error", "Pokemon no encontrado, revisa el nombre introducido...", "error"))
 }
 
+const capitalize = (word) => {
+    return word[0].toUpperCase() + word.slice(1);
+}
+
 const crearPokemon = (pokemon) =>{
     const img = document.createElement('img');
     img.src = pokemon.sprites.front_default;
 
     const pname = document.createElement('h3');
-    pname.textContent = pokemon.name;
+    pname.textContent = "#" + pokemon.id + " - " + capitalize(pokemon.name);
 
+    /*
+        IMAGEN DEL TIPO DE POKEMON
+
+    const imgType = document.createElement('img');
     
+    pokemon.types.forEach(element => {
+
+        if(element.type.name == 'electric'){
+            const imgType = document.createElement('img');
+            imgType.setAttribute("class", "types");
+            imgType.src = '../resources/img/flash.png';
+            pdivstats.appendChild(imgType);
+        }
+        
+    });
+
+    */
     const pstats = document.createElement('h4');
     
-    pstats.textContent = 'Ability';
+    pstats.textContent = 'Abilities';
 
     const pability = document.createElement('p');
 
@@ -43,17 +63,52 @@ const crearPokemon = (pokemon) =>{
     pokemon.abilities.forEach(element => {
         const pability = document.createElement('label');
         pability.setAttribute("class", "abilities");
-        pability.textContent = element.ability.name;
+        pability.textContent = capitalize(element.ability.name);
         pdivstats.appendChild(pability);
     });
     
     
     const div = document.createElement('div');
-    div.appendChild(img);
     div.appendChild(pname);
+    div.appendChild(img);
+    const pbasestats = document.createElement('h4');
     
+    pbasestats.textContent = 'Base Stats';
+    
+    pdivstats.appendChild(pbasestats);
 
     div.appendChild(pdivstats);
 
+    //BASE STATS DIVS
+    const base_stats_maindiv = document.createElement('div');
+    const base_stats_divcol1 = document.createElement('div');
+    const base_stats_divcol2 = document.createElement('div');
+
+    //BASE STATS DATA
+
+    const base_stats_hp = document.createElement('p');
+    base_stats_hp.setAttribute("class", "base_stats_HP");
+    base_stats_hp.textContent = pokemon.stats[0].stat.name.toUpperCase();
+    base_stats_divcol1.appendChild(base_stats_hp);
+
+    const base_stats_attack = document.createElement('p');
+    base_stats_attack.setAttribute("class", "base_stats_ATTACK");
+    base_stats_attack.textContent = pokemon.stats[1].stat.name.toUpperCase();
+    base_stats_divcol2.appendChild(base_stats_attack);
+
+    const base_stats_defense = document.createElement('p');
+    base_stats_defense.setAttribute("class", "base_stats_HP");
+    base_stats_defense.textContent = pokemon.stats[2].stat.name.toUpperCase();
+    base_stats_divcol1.appendChild(base_stats_defense);
+   
+
+    //APPEND BASE STATS DIVS TO POKEMON'S DIVS
+
+    base_stats_maindiv.appendChild(base_stats_divcol1);
+    base_stats_maindiv.appendChild(base_stats_divcol2);
+
+    pdivstats.appendChild(base_stats_maindiv);
+
+    //APPEND THE MAIN DIV
     pokemonContainer.appendChild(div);
 }

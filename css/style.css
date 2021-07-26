@@ -3,20 +3,26 @@ body{
 }
 
 *{
-    color: #707070;
+    color: #707070 !important;
 }
 
 .btn-primary{
     background: #E9E929 !important;
+    border: 0px;
 }
 .pokemon-container>div{
-    border-radius: 25px;
+    border-radius: 5px;
+    background-color: white;
     margin: 3% 4%;
     padding: 5%;
     width: 25vw;
-    -webkit-box-shadow: 7px 10px 25px 0px rgba(148,146,148,1);
-    -moz-box-shadow: 7px 10px 25px 0px rgba(148,146,148,1);
-    box-shadow: 7px 10px 25px 0px rgba(148,146,148,1);
+    -webkit-box-shadow: 7px 10px 25px 0px #21252966;
+    -moz-box-shadow: 7px 10px 25px 0px #21252966;
+    box-shadow: 7px 10px 25px 0px #21252966;
+}
+
+.PokemonFinder{
+    text-align: center;
 }
 
 .pokemon-container{
@@ -32,12 +38,12 @@ body{
 
 @media only screen and (max-width:648px) and (min-width:328px){
     .pokemon-container>div{
-        border-radius: 25px;
+        border-radius: 5px;
         margin: 3% 4%;
         padding: 5%;
         width: 65vw;
-        -webkit-box-shadow: 7px 10px 25px 0px rgba(148,146,148,1);
-        -moz-box-shadow: 7px 10px 25px 0px rgba(148,146,148,1);
-        box-shadow: 7px 10px 25px 0px rgba(148,146,148,1);
+        -webkit-box-shadow: 7px 10px 25px 0px #21252966;
+        -moz-box-shadow: 7px 10px 25px 0px #21252966;
+        box-shadow: 7px 10px 25px 0px #21252966;
     }
 }
