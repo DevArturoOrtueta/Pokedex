@@ -1,3 +1,14 @@
+body{
+    background-color: #ED4C5C;
+}
+
+*{
+    color: #707070;
+}
+
+.btn-primary{
+    background: #E9E929 !important;
+}
 .pokemon-container>div{
     border-radius: 25px;
     margin: 3% 4%;
