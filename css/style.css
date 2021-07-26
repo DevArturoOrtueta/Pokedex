@@ -6,6 +6,11 @@ body{
     color: #707070 !important;
 }
 
+.base_stats_maindiv{
+    display: flex;
+    justify-content: space-evenly;
+}
+
 .btn-primary{
     background: #E9E929 !important;
     border: 0px;

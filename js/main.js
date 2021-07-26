@@ -81,6 +81,7 @@ const crearPokemon = (pokemon) =>{
 
     //BASE STATS DIVS
     const base_stats_maindiv = document.createElement('div');
+    base_stats_maindiv.setAttribute("class", "base_stats_maindiv");
     const base_stats_divcol1 = document.createElement('div');
     const base_stats_divcol2 = document.createElement('div');
 
@@ -88,19 +89,39 @@ const crearPokemon = (pokemon) =>{
 
     const base_stats_hp = document.createElement('p');
     base_stats_hp.setAttribute("class", "base_stats_HP");
-    base_stats_hp.textContent = pokemon.stats[0].stat.name.toUpperCase();
+    base_stats_hp.textContent = pokemon.stats[0].stat.name.toUpperCase() + ": " + pokemon.stats[0].base_stat;
     base_stats_divcol1.appendChild(base_stats_hp);
 
     const base_stats_attack = document.createElement('p');
     base_stats_attack.setAttribute("class", "base_stats_ATTACK");
-    base_stats_attack.textContent = pokemon.stats[1].stat.name.toUpperCase();
+    base_stats_attack.textContent = pokemon.stats[1].stat.name.toUpperCase() + ": " + pokemon.stats[1].base_stat;
     base_stats_divcol2.appendChild(base_stats_attack);
 
+    const base_stats_defense = document.createElement('p');
+    base_stats_defense.setAttribute("class", "base_stats_DEFENSE");
+    base_stats_defense.textContent = pokemon.stats[2].stat.name.toUpperCase() + ": " + pokemon.stats[2].base_stat;
+    base_stats_divcol1.appendChild(base_stats_defense);
+
+    const base_stats_s_attack = document.createElement('p');
+    base_stats_s_attack.setAttribute("class", "base_stats_S_ATTACK");
+    base_stats_s_attack.textContent = pokemon.stats[3].stat.name.toUpperCase() + ": " + pokemon.stats[3].base_stat;
+    base_stats_divcol2.appendChild(base_stats_s_attack);
+
+    const base_stats_speed = document.createElement('p');
+    base_stats_speed.setAttribute("class", "base_stats_SPEED");
+    base_stats_speed.textContent = pokemon.stats[5].stat.name.toUpperCase() + ": " + pokemon.stats[5].base_stat;
+    base_stats_divcol1.appendChild(base_stats_speed);
+
+    const base_stats_s_defense = document.createElement('p');
+    base_stats_s_defense.setAttribute("class", "base_stats_S_DEFENSE");
+    base_stats_s_defense.textContent = pokemon.stats[4].stat.name.toUpperCase() + ": " + pokemon.stats[4].base_stat;
+    base_stats_divcol2.appendChild(base_stats_s_defense);
+/*
     const base_stats_defense = document.createElement('p');
     base_stats_defense.setAttribute("class", "base_stats_HP");
     base_stats_defense.textContent = pokemon.stats[2].stat.name.toUpperCase();
     base_stats_divcol1.appendChild(base_stats_defense);
-   
+   */
 
     //APPEND BASE STATS DIVS TO POKEMON'S DIVS
 
