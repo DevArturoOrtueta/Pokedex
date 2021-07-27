@@ -133,8 +133,3 @@ const crearPokemon = (pokemon) =>{
     //APPEND THE MAIN DIV
     pokemonContainer.appendChild(div);
 }
-
-
-const BaseStatsPokemon = () =>{
-
-}
