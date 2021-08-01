@@ -116,6 +116,11 @@ const crearPokemon = (pokemon) =>{
     base_stats_s_defense.setAttribute("class", "base_stats_S_DEFENSE");
     base_stats_s_defense.textContent = pokemon.stats[4].stat.name.toUpperCase() + ": " + pokemon.stats[4].base_stat;
     base_stats_divcol2.appendChild(base_stats_s_defense);
+
+    const base_stats_base_experience = document.createElement('p');
+    base_stats_base_experience.setAttribute("class", "base_stats_base_experience");
+    base_stats_base_experience.textContent = "BASE EXPERIENCE: " + pokemon.base_experience;
+
 /*
     const base_stats_defense = document.createElement('p');
     base_stats_defense.setAttribute("class", "base_stats_HP");
@@ -129,12 +134,13 @@ const crearPokemon = (pokemon) =>{
     base_stats_maindiv.appendChild(base_stats_divcol2);
 
     pdivstats.appendChild(base_stats_maindiv);
+    pdivstats.appendChild(base_stats_base_experience);
 
     //APPEND THE MAIN DIV
     pokemonContainer.appendChild(div);
 }
 
 
-const BuscarPokemon = () => {
-    
+const crearBotonModal = (pokemon, id) =>{
+
 }
