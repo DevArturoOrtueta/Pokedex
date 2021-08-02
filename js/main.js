@@ -4,6 +4,8 @@ const input = document.querySelector("input");
 const button = document.querySelector("button");
 const pokemonContainer = document.querySelector(".pokemon-container");
 let ids = 0;
+let idpokdivs = 0
+
 
 button.addEventListener('click', (e) => {
     e.preventDefault();
@@ -60,6 +62,7 @@ const crearPokemon = (pokemon) =>{
     pdivstats.appendChild(pstats);
     pdivstats.appendChild(pability);
 
+    
     pokemon.abilities.forEach(element => {
         const pability = document.createElement('label');
         pability.setAttribute("class", "abilities");
@@ -69,6 +72,8 @@ const crearPokemon = (pokemon) =>{
     
     
     const div = document.createElement('div');
+    div.setAttribute('id', 'div' + idpokdivs)
+    idpokdivs++;
     div.appendChild(pname);
     div.appendChild(img);
     const pbasestats = document.createElement('h4');
@@ -136,11 +141,29 @@ const crearPokemon = (pokemon) =>{
     pdivstats.appendChild(base_stats_maindiv);
     pdivstats.appendChild(base_stats_base_experience);
 
+    crearBotonModal(pokemon, pokemon.id, div)
     //APPEND THE MAIN DIV
     pokemonContainer.appendChild(div);
 }
 
 
-const crearBotonModal = (pokemon, id) =>{
+const crearBotonModal = (pokemon, id, div) =>{
+    
+    const location = pokemon.location_area_encounters; 
+    let btnLocations = document.createElement('input');
+    btnLocations.setAttribute('type', 'button');
+    btnLocations.setAttribute('value', 'LOCATIONS')
+    btnLocations.setAttribute('class', 'btnLocations')
+    btnLocations.setAttribute('data-bs-toggle', 'modal')
+    btnLocations.setAttribute('data-bs-target', '#LocationModal')
+    btnLocations.setAttribute('onclick', `Locations("${location}")`)
+    div.appendChild(btnLocations);
+    
+}
 
+const Locations = (location) =>{
+    fetch(location)
+        .then(resp => resp.json())
+        .then(data => console.log(data))
+        .catch(error => swal("Error", "Localizaciones no encontradas", "error"))
 }
