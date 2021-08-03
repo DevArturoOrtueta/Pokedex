@@ -184,7 +184,7 @@ const SetLocations = (locations) => {
             const locationName = document.createElement('label');
             locationName.textContent = element.location_area.name;
             const locationMethod = document.createElement('label');
-            locationMethod.textContent = 'Method: ' + element.version_details[0].encounter_details[0].method.name;
+            locationMethod.textContent = 'Method: ' + capitalize(element.version_details[0].encounter_details[0].method.name);
     
             const locationDivisor = document.createElement('hr');
     
