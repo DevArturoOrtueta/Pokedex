@@ -174,7 +174,9 @@ const SetLocations = (locations) => {
     const locationModal = document.querySelector('#modal-body');
 
     if(document.querySelector('.locationdiv')){
-        document.querySelector('.locationdiv').remove();
+        document.querySelectorAll('.locationdiv').forEach(element => {
+            element.remove();
+        });
     }else{
         locations.forEach(element => {
             const locationdiv = document.createElement('div');
