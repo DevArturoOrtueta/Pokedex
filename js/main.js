@@ -158,12 +158,42 @@ const crearBotonModal = (pokemon, id, div) =>{
     btnLocations.setAttribute('data-bs-target', '#LocationModal')
     btnLocations.setAttribute('onclick', `Locations("${location}")`)
     div.appendChild(btnLocations);
+
+
     
 }
 
 const Locations = (location) =>{
     fetch(location)
         .then(resp => resp.json())
-        .then(data => console.log(data))
-        .catch(error => swal("Error", "Localizaciones no encontradas", "error"))
+        .then(data => SetLocations(data))
+        .catch(error => swal("Error", 'error: '+error, "error"))
+}
+
+const SetLocations = (locations) => {
+    const locationModal = document.querySelector('#modal-body');
+
+    if(document.querySelector('.locationdiv')){
+        document.querySelector('.locationdiv').remove();
+    }else{
+        locations.forEach(element => {
+            const locationdiv = document.createElement('div');
+            locationdiv.setAttribute('class', 'locationdiv');
+    
+            const locationName = document.createElement('label');
+            locationName.textContent = element.location_area.name;
+            const locationMethod = document.createElement('label');
+            locationMethod.textContent = 'Method: ' + element.version_details[0].encounter_details[0].method.name;
+    
+            const locationDivisor = document.createElement('hr');
+    
+            locationdiv.appendChild(locationName);
+            locationdiv.appendChild(locationMethod);
+            locationdiv.appendChild(locationDivisor);
+    
+            locationModal.appendChild(locationdiv);
+        });
+    }
+    
+    
 }
