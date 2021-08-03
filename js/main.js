@@ -177,6 +177,23 @@ const SetLocations = (locations) => {
         document.querySelectorAll('.locationdiv').forEach(element => {
             element.remove();
         });
+        locations.forEach(element => {
+            const locationdiv = document.createElement('div');
+            locationdiv.setAttribute('class', 'locationdiv');
+    
+            const locationName = document.createElement('label');
+            locationName.textContent = element.location_area.name;
+            const locationMethod = document.createElement('label');
+            locationMethod.textContent = 'Method: ' + element.version_details[0].encounter_details[0].method.name;
+    
+            const locationDivisor = document.createElement('hr');
+    
+            locationdiv.appendChild(locationName);
+            locationdiv.appendChild(locationMethod);
+            locationdiv.appendChild(locationDivisor);
+    
+            locationModal.appendChild(locationdiv);
+        });
     }else{
         locations.forEach(element => {
             const locationdiv = document.createElement('div');
