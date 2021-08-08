@@ -159,6 +159,13 @@ const crearBotonModal = (pokemon, id, div) =>{
     btnLocations.setAttribute('onclick', `Locations("${location}")`)
     div.appendChild(btnLocations);
 
+    let btnMoves = document.createElement('input');
+    btnMoves.setAttribute('type', 'button');
+    btnMoves.setAttribute('value', 'LOCATIONS')
+    btnMoves.setAttribute('class', 'btnLocations')
+    btnMoves.setAttribute('data-bs-toggle', 'modal')
+    btnMoves.setAttribute('data-bs-target', '#MovesModal')
+
 
     
 }
