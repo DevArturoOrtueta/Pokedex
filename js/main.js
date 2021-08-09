@@ -158,19 +158,10 @@ const crearBotonModal = (pokemon, id, div) =>{
     btnLocations.setAttribute('data-bs-target', '#LocationModal')
     btnLocations.setAttribute('onclick', `Locations("${location}")`)
     div.appendChild(btnLocations);
-
-    let btnMoves = document.createElement('input');
-    btnMoves.setAttribute('type', 'button');
-    btnMoves.setAttribute('value', 'LOCATIONS')
-    btnMoves.setAttribute('class', 'btnLocations')
-    btnMoves.setAttribute('data-bs-toggle', 'modal')
-    btnMoves.setAttribute('data-bs-target', '#MovesModal')
-
-
-    
 }
 
 const Locations = (location) =>{
+    const img_location = document.querySelector('#img-locations');
     fetch(location)
         .then(resp => resp.json())
         .then(data => SetLocations(data))
@@ -179,7 +170,7 @@ const Locations = (location) =>{
 
 const SetLocations = (locations) => {
     const locationModal = document.querySelector('#modal-body');
-
+    
     if(document.querySelector('.locationdiv')){
         document.querySelectorAll('.locationdiv').forEach(element => {
             element.remove();
@@ -187,9 +178,9 @@ const SetLocations = (locations) => {
         locations.forEach(element => {
             const locationdiv = document.createElement('div');
             locationdiv.setAttribute('class', 'locationdiv');
-    
+
             const locationName = document.createElement('label');
-            locationName.textContent = element.location_area.name;
+            locationName.textContent = capitalize(element.location_area.name);
             const locationMethod = document.createElement('label');
             locationMethod.textContent = 'Method: ' + capitalize(element.version_details[0].encounter_details[0].method.name);
     
@@ -210,9 +201,12 @@ const SetLocations = (locations) => {
                 locationdiv.setAttribute('class', 'locationdiv');
         
                 const locationName = document.createElement('label');
-                locationName.textContent = element.location_area.name;
+
+                const locationnametemp = element.location_area.name;
+                
+                locationName.textContent = capitalize(element.location_area.name);
                 const locationMethod = document.createElement('label');
-                locationMethod.textContent = 'Method: ' + element.version_details[0].encounter_details[0].method.name;
+                locationMethod.textContent = 'Method: ' + capitalize(element.version_details[0].encounter_details[0].method.name);
         
                 const locationDivisor = document.createElement('hr');
         
