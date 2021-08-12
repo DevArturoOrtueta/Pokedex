@@ -6,13 +6,26 @@ const pokemonContainer = document.querySelector(".pokemon-container");
 let ids = 0;
 let idpokdivs = 0
 
+window.addEventListener('scroll', ()=>{
+    document.getElementById("arrow").style.transition = '1s ease-in-out';
+    document.getElementById("arrow").style.opacity = '0';
+    document.getElementById("arrow").style.display = 'none';
+    document.getElementById("arrow2").style.transition = '1s ease-in-out';
+    document.getElementById("arrow2").style.opacity = '0';
+    document.getElementById("arrow2").style.display = 'none';
+    document.getElementById("pokeball").style.transition = '1s ease-in-out';
+    document.getElementById("pokeball").style.opacity = '0';
+    document.getElementById("pokeball").style.display = 'none';
+    
+    document.getElementById("main").style.transition = '1s ease-in-out';
+    document.getElementById("main").style.height = '5vh';
+})
+
 
 button.addEventListener('click', (e) => {
     e.preventDefault();
     traerPokemon(input.value.toLowerCase());
-    document.getElementById("arrow").style.display = 'none';
-    document.getElementById("pokeball").style.display = 'none';
-    document.getElementById("main").style.height = '10vh';
+    
 });
 
 
