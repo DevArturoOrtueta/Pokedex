@@ -7,6 +7,20 @@ let ids = 0;
 let idpokdivs = 0
 
 window.addEventListener('scroll', ()=>{
+
+    if(window.scroll(0,0)){
+        document.getElementById("arrow").style.transition = '1s ease-in-out';
+        document.getElementById("arrow").style.opacity = '1';
+        document.getElementById("arrow").style.display = 'inherit';
+        document.getElementById("arrow2").style.transition = '1s ease-in-out';
+        document.getElementById("arrow2").style.opacity = '1';
+        document.getElementById("arrow2").style.display = 'inherit';
+        document.getElementById("pokeball").style.transition = '1s ease-in-out';
+        document.getElementById("pokeball").style.opacity = '1';
+        document.getElementById("pokeball").style.display = 'inherit';
+        document.getElementById("main").style.transition = '1s ease-in-out';
+        document.getElementById("main").style.height = '100vh';
+    }
     document.getElementById("arrow").style.transition = '1s ease-in-out';
     document.getElementById("arrow").style.opacity = '0';
     document.getElementById("arrow").style.display = 'none';
@@ -20,6 +34,35 @@ window.addEventListener('scroll', ()=>{
     document.getElementById("main").style.transition = '1s ease-in-out';
     document.getElementById("main").style.height = '5vh';
 })
+
+document.addEventListener('keydown', (event) => {
+    const keyName = event.key;
+    if(keyName == "ArrowUp"){
+        document.getElementById("arrow").style.transition = '1s ease-in-out';
+        document.getElementById("arrow").style.opacity = '1';
+        document.getElementById("arrow").style.display = 'inherit';
+        document.getElementById("arrow2").style.transition = '1s ease-in-out';
+        document.getElementById("arrow2").style.opacity = '1';
+        document.getElementById("arrow2").style.display = 'inherit';
+        document.getElementById("pokeball").style.transition = '1s ease-in-out';
+        document.getElementById("pokeball").style.opacity = '1';
+        document.getElementById("pokeball").style.display = 'inherit';
+        document.getElementById("main").style.transition = '1s ease-in-out';
+    document.getElementById("main").style.height = '100vh';
+    }else if(keyName == "w" || keyName == "W"){
+        document.getElementById("arrow").style.transition = '1s ease-in-out';
+        document.getElementById("arrow").style.opacity = '1';
+        document.getElementById("arrow").style.display = 'inherit';
+        document.getElementById("arrow2").style.transition = '1s ease-in-out';
+        document.getElementById("arrow2").style.opacity = '1';
+        document.getElementById("arrow2").style.display = 'inherit';
+        document.getElementById("pokeball").style.transition = '1s ease-in-out';
+        document.getElementById("pokeball").style.opacity = '1';
+        document.getElementById("pokeball").style.display = 'inherit';
+        document.getElementById("main").style.transition = '1s ease-in-out';
+    document.getElementById("main").style.height = '100vh';
+    }
+  });
 
 
 button.addEventListener('click', (e) => {
