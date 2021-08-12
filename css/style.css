@@ -8,12 +8,20 @@ body{
     color: #707070 !important;
 }
 
-.arrow-down1, .arrow-down2{
+.arrow-down1, .arrow-down2, .scrolldown{
     position: absolute;
     width: 5%;
     height: 5%;
     left: 47%;
     animation: arrow-down 2s alternate infinite;
+}
+
+.scrolldown{
+    bottom: 90px;
+    font-size: 24px;
+    left: 45.5%;
+    color: white !important;
+    min-width: fit-content;
 }
 
 .arrow-down1{
@@ -145,6 +153,13 @@ ul li > a{
         display: inline-flex;
         max-width: 700px;
         min-width: inherit;
+    }
+    .scrolldown{
+        bottom: 90px;
+        font-size: 24px;
+        left: 35%;
+        color: white !important;
+        min-width: fit-content;
     }
 }
 
