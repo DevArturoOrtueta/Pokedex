@@ -154,11 +154,11 @@ ul li > a{
 
     }
     50%{
-        transform: rotate(45deg) translateX(15px);
+        transform: rotate(45deg) translateX(55px);
        
     }
     100%{
-        transform: rotate(-45deg) translateX(-15px);
+        transform: rotate(-45deg) translateX(-55px);
         
     }
 }
