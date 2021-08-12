@@ -4,16 +4,14 @@ body{
     padding: 0;
 }
 
+.types{
+    width: 15%;
+}
+
 *{
     color: #707070 !important;
 }
 
-.navbar-brand, .offcanvas-title{
-    color: white !important;
-}
-.offcanvas-body, .offcanvas-header, .navbar{
-    background-color: #ED4C5C !important;
-}
 .arrow-down1, .arrow-down2, .scrolldown{
     position: absolute;
     width: 5%;
