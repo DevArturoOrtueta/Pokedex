@@ -10,6 +10,9 @@ let idpokdivs = 0
 button.addEventListener('click', (e) => {
     e.preventDefault();
     traerPokemon(input.value.toLowerCase());
+    document.getElementById("arrow").style.display = 'none';
+    document.getElementById("pokeball").style.display = 'none';
+    document.getElementById("main").style.height = '10vh';
 });
 
 
