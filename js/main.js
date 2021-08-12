@@ -1,7 +1,7 @@
 //import {crearPokemon} from 'crearPokemon.js';
 
 const input = document.querySelector("input");
-const button = document.querySelector("#btn-busqueda");
+const button = document.querySelector("button");
 const pokemonContainer = document.querySelector(".pokemon-container");
 let ids = 0;
 let idpokdivs = 0
