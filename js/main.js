@@ -1,7 +1,7 @@
 //import {crearPokemon} from 'crearPokemon.js';
 
 const input = document.querySelector("input");
-const button = document.querySelector("button");
+const button = document.querySelector("#btn-busqueda");
 const pokemonContainer = document.querySelector(".pokemon-container");
 let ids = 0;
 let idpokdivs = 0
@@ -30,6 +30,9 @@ window.addEventListener('scroll', ()=>{
     document.getElementById("pokeball").style.transition = '1s ease-in-out';
     document.getElementById("pokeball").style.opacity = '0';
     document.getElementById("pokeball").style.display = 'none';
+    document.getElementById("scrolldown").style.transition = '1s ease-in-out';
+    document.getElementById("scrolldown").style.opacity = '0';
+    document.getElementById("scrolldown").style.display = 'none';
     
     document.getElementById("main").style.transition = '1s ease-in-out';
     document.getElementById("main").style.height = '5vh';

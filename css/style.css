@@ -8,18 +8,24 @@ body{
     color: #707070 !important;
 }
 
+.navbar-brand, .offcanvas-title{
+    color: white !important;
+}
+.offcanvas-body, .offcanvas-header, .navbar{
+    background-color: #ED4C5C !important;
+}
 .arrow-down1, .arrow-down2, .scrolldown{
     position: absolute;
     width: 5%;
     height: 5%;
-    left: 47%;
+    
     animation: arrow-down 2s alternate infinite;
 }
 
 .scrolldown{
     bottom: 90px;
     font-size: 24px;
-    left: 45.5%;
+    margin-left: -1%;
     color: white !important;
     min-width: fit-content;
 }
@@ -136,6 +142,10 @@ ul li > a{
 .btnLocations:hover{
     opacity: 0.8;
 }
+
+.texto{
+    text-align: center;
+}
 @media only screen and (max-width:648px) and (min-width:328px){
     .pokemon-container>div{
         border-radius: 5px;
@@ -157,7 +167,7 @@ ul li > a{
     .scrolldown{
         bottom: 90px;
         font-size: 24px;
-        left: 35%;
+        margin-left: -12%;
         color: white !important;
         min-width: fit-content;
     }
