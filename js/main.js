@@ -18,6 +18,9 @@ window.addEventListener('scroll', ()=>{
         document.getElementById("pokeball").style.transition = '1s ease-in-out';
         document.getElementById("pokeball").style.opacity = '1';
         document.getElementById("pokeball").style.display = 'inherit';
+        document.getElementById("scrolldown").style.transition = '1s ease-in-out';
+    document.getElementById("scrolldown").style.opacity = '0';
+    document.getElementById("scrolldown").style.display = 'none';
         document.getElementById("main").style.transition = '1s ease-in-out';
         document.getElementById("main").style.height = '100vh';
     }
