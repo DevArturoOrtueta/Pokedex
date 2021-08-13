@@ -92,103 +92,103 @@ const crearPokemon = (pokemon) =>{
         if(element.type.name == 'electric'){
             const imgType = document.createElement('img');
             imgType.setAttribute("class", "types");
-            imgType.src = '../resources/img_types/electric_type.png';
+            imgType.src = './resources/img_types/electric_type.png';
             pdivstats.appendChild(imgType);
         }
         if(element.type.name == 'dragon'){
             const imgType = document.createElement('img');
             imgType.setAttribute("class", "types");
-            imgType.src = '../resources/img_types/dragon_type.png';
+            imgType.src = './resources/img_types/dragon_type.png';
             pdivstats.appendChild(imgType);
         }
         if(element.type.name == 'flying'){
             const imgType = document.createElement('img');
             imgType.setAttribute("class", "types");
-            imgType.src = '../resources/img_types/flying_type.jpg';
+            imgType.src = './resources/img_types/flying_type.jpg';
             pdivstats.appendChild(imgType);
         }
         if(element.type.name == 'bug'){
             const imgType = document.createElement('img');
             imgType.setAttribute("class", "types");
-            imgType.src = '../resources/img_types/bug_type.png';
+            imgType.src = './resources/img_types/bug_type.png';
             pdivstats.appendChild(imgType);
         }
         if(element.type.name == 'dark'){
             const imgType = document.createElement('img');
             imgType.setAttribute("class", "types");
-            imgType.src = '../resources/img_types/dark_type.png';
+            imgType.src = './resources/img_types/dark_type.png';
             pdivstats.appendChild(imgType);
         }
         if(element.type.name == 'fairy'){
             const imgType = document.createElement('img');
             imgType.setAttribute("class", "types");
-            imgType.src = '../resources/img_types/fairy_type.png';
+            imgType.src = './resources/img_types/fairy_type.png';
             pdivstats.appendChild(imgType);
         }
         if(element.type.name == 'fight'){
             const imgType = document.createElement('img');
             imgType.setAttribute("class", "types");
-            imgType.src = '../resources/img_types/fight_type.png';
+            imgType.src = './resources/img_types/fight_type.png';
             pdivstats.appendChild(imgType);
         }
         if(element.type.name == 'fire'){
             const imgType = document.createElement('img');
             imgType.setAttribute("class", "types");
-            imgType.src = '../resources/img_types/fire_type.png';
+            imgType.src = './resources/img_types/fire_type.png';
             pdivstats.appendChild(imgType);
         }
         if(element.type.name == 'ghost'){
             const imgType = document.createElement('img');
             imgType.setAttribute("class", "types");
-            imgType.src = '../resources/img_types/ghost_type.png';
+            imgType.src = './resources/img_types/ghost_type.png';
             pdivstats.appendChild(imgType);
         }
         if(element.type.name == 'grass'){
             const imgType = document.createElement('img');
             imgType.setAttribute("class", "types");
-            imgType.src = '../resources/img_types/grass_type.png';
+            imgType.src = './resources/img_types/grass_type.png';
             pdivstats.appendChild(imgType);
         }
         if(element.type.name == 'ice'){
             const imgType = document.createElement('img');
             imgType.setAttribute("class", "types");
-            imgType.src = '../resources/img_types/ice_type.png';
+            imgType.src = './resources/img_types/ice_type.png';
             pdivstats.appendChild(imgType);
         }
         if(element.type.name == 'normal'){
             const imgType = document.createElement('img');
             imgType.setAttribute("class", "types");
-            imgType.src = '../resources/img_types/normal_type.png';
+            imgType.src = './resources/img_types/normal_type.png';
             pdivstats.appendChild(imgType);
         }
         if(element.type.name == 'poison'){
             const imgType = document.createElement('img');
             imgType.setAttribute("class", "types");
-            imgType.src = '../resources/img_types/poison_type.png';
+            imgType.src = './resources/img_types/poison_type.png';
             pdivstats.appendChild(imgType);
         }
         if(element.type.name == 'psychic'){
             const imgType = document.createElement('img');
             imgType.setAttribute("class", "types");
-            imgType.src = '../resources/img_types/psychic_type.png';
+            imgType.src = './resources/img_types/psychic_type.png';
             pdivstats.appendChild(imgType);
         }
         if(element.type.name == 'rock'){
             const imgType = document.createElement('img');
             imgType.setAttribute("class", "types");
-            imgType.src = '../resources/img_types/rock_type.png';
+            imgType.src = './resources/img_types/rock_type.png';
             pdivstats.appendChild(imgType);
         }
         if(element.type.name == 'steel'){
             const imgType = document.createElement('img');
             imgType.setAttribute("class", "types");
-            imgType.src = '../resources/img_types/steel_type.png';
+            imgType.src = './resources/img_types/steel_type.png';
             pdivstats.appendChild(imgType);
         }
         if(element.type.name == 'water'){
             const imgType = document.createElement('img');
             imgType.setAttribute("class", "types");
-            imgType.src = '../resources/img_types/water_type.png';
+            imgType.src = './resources/img_types/water_type.png';
             pdivstats.appendChild(imgType);
         }
     });
